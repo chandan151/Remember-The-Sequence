@@ -1,3 +1,11 @@
-body{
-    background-color: #1879da;
+body {
+    text-align: center;
+    background-color: #011F3F;
 }
+
+#level-title {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 3rem;
+    margin:  5%;
+    color: #FEF2BF;
+  }
