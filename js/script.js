@@ -86,3 +86,15 @@ function startOver() {
     level = 0;
     gamePattern = [];
 }
+
+$(document).ready(function () {
+    $("#instructions-button").click(function () {
+        $("#instructions-box").fadeToggle();
+    });
+
+    $(document).click(function (event) {
+        if (!$(event.target).closest("#instructions-box, #instructions-button").length) {
+            $("#instructions-box").fadeOut();
+        }
+    });
+});

@@ -50,3 +50,34 @@ body {
     box-shadow: 0 0 20px white;
     background-color: grey;
 }
+
+#instructions-button {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #FEF2BF;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#instructions-box {
+    display: none;
+    position: fixed;
+    top: 50px;
+    right: 10px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    text-align: left;
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
