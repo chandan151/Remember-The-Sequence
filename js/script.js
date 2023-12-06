@@ -8,6 +8,7 @@ $(document).keypress(function() {
     if(!started){
         $('#level-title').text("Level " + level);
         console.log("Level " + level);
+        nextSequence();
     }
 });
 
@@ -28,4 +29,22 @@ function startOver() {
     started = false;
     level = 0;
     gamePattern = [];
+}
+
+function nextSequence() {
+    userClickedPattern = [];
+
+    randomNumber = Math.floor(Math.random() * 4);
+    
+    let randomChosenColour = buttonColours[randomNumber];
+    gamePattern.push(randomChosenColour);
+    
+    $("#" + randomChosenColour)
+    .fadeIn(80)
+    .fadeOut(80)
+    .fadeIn(80);
+    
+    playSound(randomChosenColour);
+    level++;
+    $('#level-title').text('Level ' + level);
 }
